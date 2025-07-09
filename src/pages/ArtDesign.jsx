@@ -1,9 +1,8 @@
 import React from 'react';
 
 const ArtDesign = () => (
-  <div>
-    <h2>art/design</h2>
-    <p>art/design</p>
+  <div className="artdesign-container">
+    <h1>art/design.</h1>
   </div>
 );
 

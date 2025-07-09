@@ -1,9 +1,8 @@
 import React from 'react';
 
 const UxUi = () => (
-  <div>
-    <h2>ux/ui</h2>
-    <p>ux/ui and product design</p>
+  <div className="uxui-container">
+    <h1>ux/ui.</h1>
   </div>
 );
 

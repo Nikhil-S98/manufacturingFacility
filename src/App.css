@@ -1,54 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
+/* Header Styles */
 .main-header {
   position: fixed;
   top: 0;
@@ -61,133 +11,203 @@ header {
   justify-content: flex-start;
   min-height: 60px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding-right: 2rem;
-  padding-left: 0;
+  padding: 0 2rem;
 }
 
 .hamburger {
-  margin-right: 1rem;
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1200;
 }
 
+.bar {
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Navigation */
 nav {
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav a {
-  font-family: 'Cutive Mono', 'Menlo', 'Consolas', monospace;
-  font-size: 1.5rem;
-  margin: 0 1.2rem;
+  font-family: 'Cutive Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace !important;
+  font-size: 1.3rem;
   text-transform: lowercase;
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  margin: 0 1.2rem;
 }
+
 nav a:hover {
   color: #242424;
 }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  margin-right: 1.5rem;
-  height: 48px;
+/* Main Content */
+main {
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
 }
 
-.site-logo {
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  height: 48px;
-  width: 48px;
-  object-fit: contain;
-  box-shadow: none;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .main-header {
-    justify-content: flex-start;
-    padding-left: 0;
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 4rem 2rem 2rem 2rem;
-    gap: 2rem;
-    width: 70vw;
-    max-width: 320px;
-    transform: translateX(-100%);
-    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-    z-index: 1000;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.2);
-  }
-  nav.open {
-    transform: translateX(0);
-  }
-  nav a {
-    margin: 0 0 1.5rem 0;
-    font-size: 1.3rem;
-    width: 100%;
-    color: #fff;
-    text-align: left;
-  }
-  .hamburger {
-    display: flex;
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-  }
-  .site-logo {
-    height: 36px;
-    width: 36px;
-  }
-  .logo-link {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: 36px;
-  }
-}
-
-/* Add padding to main content so it's not hidden under the fixed header */
-#root > div {
-  padding-top: 70px;
-}
-
+/* Home Page Styles */
 .home-container {
   text-align: left;
-  margin-left: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .home-sections {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .home-section {
-  flex: 1 1 250px;
-  min-width: 250px;
   background: #f7f7fa;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.home-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.home-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.home-section p {
+  color: #666;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .home-link {
   display: inline-block;
-  margin-top: 1rem;
   color: #8e44ad;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #8e44ad;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
 
-@media (max-width: 900px) {
-  .home-sections {
+.home-link:hover {
+  background: #8e44ad;
+  color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0 1rem;
+  }
+  
+  .hamburger {
+    display: flex;
+    margin-right: 1rem;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70vw;
+    max-width: 320px;
+    background: #e49cff;
     flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 2px 0 16px rgba(0,0,0,0.2);
+  }
+  
+  nav.open {
+    transform: translateX(0);
+  }
+  
+  nav a {
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .home-container {
+    padding: 0 1rem;
+  }
+  
+  .home-sections {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+/* Page Content Styles */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-content h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.page-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.pixelate {
+  image-rendering: pixelated;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cutive Mono', 'Fira Mono', monospace !important;
+  font-weight: 400;
+}
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+h4, h5, h6 { font-size: 1.1em; }
+p, .home-link, .home-section, .home-container, .logo-link {
+  font-size: 1em;
+}
+
+.home-container,
+.about-container,
+.artdesign-container,
+.music-container,
+.uxui-container {
+  padding: 2rem;
 }
