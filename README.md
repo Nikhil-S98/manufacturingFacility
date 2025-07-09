@@ -1,12 +1,39 @@
-# React + Vite
+# manufacturing facility
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+a personal portfolio website showcasing creative work across multiple disciplines including ux/ui design, art/design, music, and more.
 
-Currently, two official plugins are available:
+## features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **interactive navigation**: clean, responsive navigation with hamburger menu for mobile
+- **breadcrumb system**: file/folder style breadcrumb navigation showing current page hierarchy
+- **smooth animations**: gsap-powered page transitions and hover effects
+- **modern design**: clean, minimalist aesthetic with monospace typography
+- **responsive layout**: optimized for desktop and mobile devices
 
-## Expanding the ESLint configuration
+## tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **react 18** with vite for fast development
+- **react router** for client-side routing
+- **gsap** for smooth animations
+- **css3** with custom styling
+- **responsive design** with mobile-first approach
+
+## project structure
+
+```
+src/
+├── components/
+│   ├── Breadcrumb.jsx      # breadcrumb navigation component
+│   └── Breadcrumb.css      # breadcrumb styles
+├── pages/
+│   ├── Home.jsx            # home page
+│   ├── ArtDesign.jsx       # art/design section
+│   ├── UxUi.jsx           # ux/ui section
+│   ├── Music.jsx           # music section
+│   ├── About.jsx           # about page
+│   └── PocketSession.jsx   # sample subpage
+├── App.jsx                 # main app component
+└── App.css                 # global styles
+```
+
+**made with [cursor](https://cursor.sh)**
