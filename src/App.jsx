@@ -7,6 +7,8 @@ import ArtDesign from './pages/ArtDesign';
 import UxUi from './pages/UxUi';
 import Music from './pages/Music';
 import About from './pages/About';
+import PocketSession from './pages/PocketSession';
+import Breadcrumb from './components/Breadcrumb';
 
 function App() {
   const location = useLocation();
@@ -45,11 +47,14 @@ function App() {
         </nav>
       </header>
       
+      <Breadcrumb />
+      
       <main ref={pageRef} key={location.pathname}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/art-design" element={<ArtDesign />} />
           <Route path="/ux-ui" element={<UxUi />} />
+          <Route path="/ux-ui/pocket-session" element={<PocketSession />} />
           <Route path="/music" element={<Music />} />
           <Route path="/about" element={<About />} />
         </Routes>

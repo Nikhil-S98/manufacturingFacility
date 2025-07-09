@@ -61,8 +61,8 @@ nav a:hover {
 
 /* Main Content */
 main {
-  padding-top: 80px;
-  min-height: calc(100vh - 80px);
+  padding-top: 120px;
+  min-height: calc(100vh - 120px);
 }
 
 /* Home Page Styles */
@@ -166,6 +166,11 @@ main {
   .home-sections {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  main {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
   }
 }
 
