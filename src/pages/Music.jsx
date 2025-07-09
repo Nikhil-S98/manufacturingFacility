@@ -2,8 +2,8 @@ import React from 'react';
 
 const Music = () => (
   <div>
-    <h2>Music</h2>
-    <p>Welcome to the Music section of Manufacturing Facility.</p>
+    <h2>music</h2>
+    <p>my current project, Purple Plastic Band</p>
   </div>
 );
 

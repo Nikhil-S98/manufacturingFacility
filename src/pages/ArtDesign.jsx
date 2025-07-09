@@ -2,8 +2,8 @@ import React from 'react';
 
 const ArtDesign = () => (
   <div>
-    <h2>Art/Design</h2>
-    <p>Welcome to the Art/Design section of Manufacturing Facility.</p>
+    <h2>art/design</h2>
+    <p>art/design</p>
   </div>
 );
 

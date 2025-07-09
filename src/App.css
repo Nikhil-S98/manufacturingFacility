@@ -49,52 +49,73 @@ header {
   margin-bottom: 2rem;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #e49cff;
+  z-index: 1100;
+  display: flex;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
+  justify-content: flex-start;
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-right: 2rem;
+  padding-left: 0;
 }
-.hamburger .bar {
-  width: 28px;
-  height: 4px;
-  background: #646cff;
-  margin: 3px 0;
-  border-radius: 2px;
-  transition: 0.3s;
+
+.hamburger {
+  margin-right: 1rem;
+  display: none;
 }
 
 nav {
+  margin: 0 auto;
+}
+
+nav a {
+  font-family: 'Cutive Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 1.5rem;
+  margin: 0 1.2rem;
+  text-transform: lowercase;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #242424;
+}
+
+.logo-link {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
   align-items: center;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
+  height: 48px;
+}
+
+.site-logo {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  box-shadow: none;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
+  .main-header {
+    justify-content: flex-start;
+    padding-left: 0;
   }
   nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #242424;
     flex-direction: column;
     align-items: flex-start;
     padding: 4rem 2rem 2rem 2rem;
     gap: 2rem;
-    height: 100vh;
     width: 70vw;
     max-width: 320px;
     transform: translateX(-100%);
@@ -106,9 +127,67 @@ nav {
     transform: translateX(0);
   }
   nav a {
+    margin: 0 0 1.5rem 0;
     font-size: 1.3rem;
-    padding: 0.5rem 0;
     width: 100%;
     color: #fff;
+    text-align: left;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+  .site-logo {
+    height: 36px;
+    width: 36px;
+  }
+  .logo-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 36px;
+  }
+}
+
+/* Add padding to main content so it's not hidden under the fixed header */
+#root > div {
+  padding-top: 70px;
+}
+
+.home-container {
+  text-align: left;
+  margin-left: 0;
+}
+
+.home-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+  background: #f7f7fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 1.5rem;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #8e44ad;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .home-sections {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
